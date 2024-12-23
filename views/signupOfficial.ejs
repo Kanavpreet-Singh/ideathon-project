@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E Governance</title>
+    <link rel="stylesheet" href="/signup.css">
+</head>
+<body>
+    <form action="/user/signupOfficial" method="post">
+        <h2>Sign Up</h2>
+        <h3><i>Government Official</i></h3>
+        <% if (typeof error !== 'undefined') { %>
+            <p style="color: red;"><%= error %></p>
+        <% } %>
+        <input type="text" name="first_name" placeholder="First Name" required >
+        <input type="text" name="last_name" placeholder="Last Name" >
+        <input type="number" placeholder="Age" name="age" required>
+        <input type="text" name="username" placeholder="username" required>
+        <input type="text" name="email" placeholder="email" required>
+        <input type="password" name="password" placeholder="password" required>
+        
+        <button>Submit</button>
+    </form>
+
+    
+</body>
+</html>

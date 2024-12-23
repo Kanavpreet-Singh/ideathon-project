@@ -1,0 +1,31 @@
+handle userlogin
+
+async function handleUserLogin(req, res) {
+    const { email, password } = req.body;
+
+    try {
+        // Check if email and password are provided
+        if (!email || !password) {
+            return res.render("login.ejs", {
+                error: "Email and password are required.",
+            });
+        }
+
+        
+        const user = await User.findOne({ email, password });
+        if (!user) {
+            
+            return res.render("login.ejs", {
+                error: "Invalid email or password.",
+            });
+        }
+        const sessionId=uuidv4()
+
+        console.log("Logged in user:", user);
+        return res.redirect("http://localhost:8000");
+    } catch (error) {
+        console.error("Error during login:", error);
+        return res.status(500).send("Something went wrong during login.");
+    }
+}
+

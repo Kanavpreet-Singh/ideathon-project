@@ -1,0 +1,105 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h2{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Form Styles */
+form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Input Fields Styles */
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 1rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus {
+    border: 1px solid #25891e; /* Light green for focus effect */
+    outline: none;
+}
+
+/* Button Styles */
+button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #0056a3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #8fbb99; /* Slightly darker green */
+    transform: scale(1.05);
+}
+
+button:active {
+    background-color: #595a4a; /* Darker green on click */
+    transform: scale(0.98);
+}
+
+/* Placeholder Text */
+input::placeholder {
+    color: #aaa;
+}
+
+/* Form Title */
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: #363635; /* Dark gray */
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+    form {
+        padding: 1.5rem;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="number"] {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1.1rem;
+    }
+}

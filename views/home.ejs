@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Governance</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=account_circle" />
+</head>
+<body>
+    <nav id="navbar">
+        <div class="logo">
+            <img src="/photos/e-Governance.jpg" alt="E-Governance Logo">
+            <a href="/action" title="Go to homepage">E-Governance</a>
+        </div>
+        
+        <div class="nav-options">
+            <a href="/aboutUs" title="Learn more about us">About Us</a>
+            <a href="/services" title="Explore our services">Features</a>
+            <a href="#contact" title="Get in touch with us">Contact Us</a>
+            <a href="/user/chooses" title="Sign Up">SignUp</a>
+            <a href="/user/choosel" title="Log in">Login</a>
+            <a href="/profile" title="Your profile">
+                <span class="material-symbols-outlined">account_circle</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <img src="city.jpg" alt="Cityscape" class="hero-image">
+        <h1>Welcome to E-Governance</h1>
+        <p>Empowering citizens through digital governance.</p>
+        <a href="#services" class="cta">Explore Services</a>
+    </header>
+
+    <!-- About Us Section -->
+    
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <h2>Our Services</h2>
+        <div class="services-container">
+            <div class="service">
+                
+                <h3>Post an Issue</h3>
+                <p>
+                    Submit issues such as drainage blockages, potholes, or other problems 
+                    directly to the government for quicker resolutions.
+                </p>
+                <br>
+                <form action="/newIssue">
+                    <button class="btn">Post</button>
+
+                </form>
+            </div>
+            <div class="service">
+                
+                <h3>View all issues</h3>
+                <p>
+                    Check for issues posted on the website and contribute by upvoting or providing feedbacks!
+                </p>
+                <br>
+                <br>
+                <form action="/issues1">
+                    <button class="btn">View</button>
+
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <p>&copy; 2024 E-Governance. All rights reserved.</p>
+        <p>Email: contact@egovernance.com | Phone: +91-123-456-7890</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

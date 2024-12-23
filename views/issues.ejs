@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Issues</title>
+    <link rel="stylesheet" href="viewissues.css">
+</head>
+<body>
+
+    <% if(issues.length === 0) { %>
+        <p>No issues available at the moment.</p>
+    <% } else { %>
+        <% for(let issue of issues) { %>
+
+            <div class="issue-container">
+                <p>Username: <%= issue.username %> <br> State: <%= issue.state %> <br> district: <%= issue.district %> <br> Subject: <b><%= issue.subject %> </b></p>
+                <h3>Description: <%= issue.description %></h3>
+                <p>Upvotes: <%= issue.upvote %></p>
+                <form action="/<%= issue._id %>/upvote?_method=PATCH" method="POST">
+                    <button type="submit">UPVOTE</button>
+                </form>
+            </div>
+
+        <% } %>
+    <% } %>
+
+    <a href="/">Go to Home Page</a>
+
+</body>
+</html>
